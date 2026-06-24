@@ -44,14 +44,8 @@ function ServicesPage() {
       icon: PackageIcon,
       title: "Suphaa maashina buna, shunkurti fi juusi",
        image: "/co.png",
-
-      description: "Mani daldala meeshalee mana charu namoota dhuunmfanis ta'ee gurmuun meeshalee mana fi kanneen biro baay'inaan barbaadaniif dhiyeesu irrati argama.",
-      features: [
-        // "Volume discounts",
-        // "Priority processing",
-        // "Flexible payment terms",
-        // "Dedicated account manager"
-      ]
+      description: "Suphaa maashina buna, shunkurti fi juusi kaamiyu ni keenina .",
+      
     },
     {
       icon: UsersIcon,
@@ -168,24 +162,24 @@ function ServicesPage() {
                   </p>
 
                   {/* Features List */}
-                  {service.features.length > 0 && (
+                  {service.features && service.features.length > 0 && (
                     <>
                       <div className="divider my-4"></div>
                       <ul className="space-y-3">
                         {service.features.map((feature, idx) => (
                           <li key={idx} className="flex items-start gap-3">
                             <div className="bg-success/10 p-1 rounded-full mt-0.5">
-                              <svg 
-                                className="size-4 text-success" 
-                                fill="none" 
-                                viewBox="0 0 24 24" 
+                              <svg
+                                className="size-4 text-success"
+                                fill="none"
+                                viewBox="0 0 24 24"
                                 stroke="currentColor"
                               >
-                                <path 
-                                  strokeLinecap="round" 
-                                  strokeLinejoin="round" 
-                                  strokeWidth={2} 
-                                  d="M5 13l4 4L19 7" 
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M5 13l4 4L19 7"
                                 />
                               </svg>
                             </div>
