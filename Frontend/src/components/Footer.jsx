@@ -14,11 +14,11 @@ function Footer() {
               </div>
               <div>
                 <h3 className="font-bold text-lg">Mana supha fi</h3>
-                <p className="text-sm font-semibold">Gurgurtaa electronics Fira</p>
+                <p className="text-sm font-semibold">Gurgurtaa meeshalee electronics Fira</p>
               </div>
             </div>
             <p className="text-sm text-base-content/70 leading-relaxed">
-              Mana gurgurta meeshalee mana amaansiisa kara online fi qaaman ni kenina
+              Karaa social media mana supha fi gurgurtaa electronics firan nu qunamu dandeesu.
             </p>
             
             <div className="flex gap-3">
@@ -53,7 +53,7 @@ function Footer() {
           <div className="space-y-4">
             <h4 className="font-bold text-lg flex items-center gap-2">
               <span className="text-primary">●</span>
-              Kara qunamti safisa
+              Kara baafata fuula safisa
             </h4>
             <ul className="space-y-2">
               <li>
@@ -93,17 +93,24 @@ function Footer() {
             <ul className="space-y-2">
               <li className="text-base-content/70 flex items-center gap-2">
                 <TruckIcon className="size-4 text-primary" />
-                Dhiyeesi hanga mana
+                Supha stove fi haara.
               </li>
               <li className="text-base-content/70 flex items-center gap-2">
                 <ShieldCheckIcon className="size-4 text-primary" />
-                Bakka jirtan teesani ajajachu
+                 Dishii sirreesu fi Hidhu.
               </li>
               <li className="text-base-content/70 flex items-center gap-2">
                 <TagIcon className="size-4 text-primary" />
-                Meesha baay'ee ajajachuuf
+                Maashina buna, shunkurti fi Juusi haara fi supha isaani.
               </li>
-             
+               <li className="text-base-content/70 flex items-center gap-2">
+                <TagIcon className="size-4 text-primary" />
+                Memory irraati Musiqa fee'u.
+              </li>
+              <li className="text-base-content/70 flex items-center gap-2">
+                <TagIcon className="size-4 text-primary" />
+                 Eelee bideena, daabo haara fi supha isaani.
+              </li>
             </ul>
           </div>
 
@@ -120,7 +127,7 @@ function Footer() {
                 </svg>
                 <div>
                   <p className="font-medium text-sm">Lakkoofsa Bilbila</p>
-                  <p className="text-base-content/70 text-sm">09 54 74 65 80 33</p>
+                  <p className="text-base-content/70 text-sm">09 73 96 36 04</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -131,8 +138,7 @@ function Footer() {
                 <div>
                   <p className="font-medium text-sm">Iddon argama keenya</p>
                   <p className="text-base-content/70 text-sm leading-relaxed">
-                    Maagala Leeman daandii guudda irra<br/>
-                    Naanawa agilgillooti
+                    Maagala Leeman faarmasi Taade fuuldura 
                   </p>
                 </div>
               </li>
