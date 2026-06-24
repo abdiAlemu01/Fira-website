@@ -50,13 +50,9 @@ function ServicesPage() {
     {
       icon: UsersIcon,
       title: "Generator fi ispiikari sagantaa garaagaraf kirreesu",
+      
       description: "Mani daldala meeshalee mana charu Meeshalee guutuu qulqulina isaani eegatan gatii madalawaadhan Afooshalee hawaasa magaala keenya fi naanawa ishee jiraatanif kennu irrati ergamna. Kanaaf haala mijata kanneen armaan gadi uumne ",
-      features: [
-        "Qooqodani kafalti rawaachuu",
-        "Dhiyeesi gatii madalaawa",
-        "Meeshalee guutuu iddoo tokkoti ajajachuu",
-        "Meeshalee guutuu bakka tokkoti dhiyeesu"
-      ]
+      
     },
     {
       icon: RefreshCwIcon,
