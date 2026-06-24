@@ -67,32 +67,13 @@ function HomePage() {
   );
 
   return (
-
-    
-    <div className="min-h-screen bg-base-200">
-      <div className="bg-gradient-to-r from-primary to-secondary text-primary-content">
-        <div className="max-w-7xl mx-auto px-4 py-8 sm:py-10 md:py-16">
-          <div className="text-center space-y-3 sm:space-y-4">
-           <div className="space-y-4 text-center">
- <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] text-white">
-  MANA Supha fi
-  <br />
-  <span className="text-white/80 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
-    Gurgurtaa Electronics Fira
-  </span>
-</h1>
-
-  <div className="flex items-center justify-center gap-3">
-    <div className="h-px w-10 sm:w-16 bg-primary/40"></div>
-
-    
-    <div className="h-px w-10 sm:w-16 bg-primary/40"></div>
-    </div>
-    </div>
-
-            
-          </div>
-        </div>
+    <div className="min-h-screen bg-base-300">
+      <div className="relative w-full h-screen flex items-center justify-center bg-base-200 overflow-hidden">
+        <img 
+          src="/firaa.png" 
+          alt="Logo" 
+          className="w-full h-full object-contain"
+        />
       </div>
 
       <main className="max-w-7xl mx-auto px-3 sm:px-4 py-6 sm:py-8">

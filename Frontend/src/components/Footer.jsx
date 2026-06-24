@@ -13,8 +13,8 @@ function Footer() {
                 <PackageIcon className="size-6 text-primary-content" />
               </div>
               <div>
-                <h3 className="font-bold text-lg">MANA GURGURTAA</h3>
-                <p className="text-sm font-semibold">MEESHALE MANA CHARU TESFAYE</p>
+                <h3 className="font-bold text-lg">Mana supha fi</h3>
+                <p className="text-sm font-semibold">Gurgurtaa electronics Fira</p>
               </div>
             </div>
             <p className="text-sm text-base-content/70 leading-relaxed">
