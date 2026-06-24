@@ -75,10 +75,10 @@ function HomePage() {
           <div className="text-center space-y-3 sm:space-y-4">
            <div className="space-y-4 text-center">
  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] text-white">
-  MANA GURGURTAA
+  MANA Supha fi
   <br />
   <span className="text-white/80 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
-    MEESHALEE MANA CHARU TESFAYE
+    Gurgurtaa Electronics Fira
   </span>
 </h1>
 
@@ -89,45 +89,6 @@ function HomePage() {
     <div className="h-px w-10 sm:w-16 bg-primary/40"></div>
     </div>
     </div>
-
-
-
-
-          
-
-          <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4 pt-6">
-
-  <div className="group flex items-center gap-3 px-5 py-3 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/15 transition-all duration-300">
-    <div className="flex items-center justify-center size-10 rounded-full bg-white/10">
-      <TruckIcon className="size-5 text-white" />
-    </div>
-    <span className="font-medium text-sm md:text-base text-white">
-      Dhiyeessa Safisan kenina
-    </span>
-  </div>
-
-  <div className="group flex items-center gap-3 px-5 py-3 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/15 transition-all duration-300">
-    <div className="flex items-center justify-center size-10 rounded-full bg-white/10">
-      <ShieldCheckIcon className="size-5 text-white" />
-    </div>
-    <span className="font-medium text-sm md:text-base text-white">
-      Amanamummaan kan Mirkanaa'e
-    </span>
-  </div>
-
-  <div className="group flex items-center gap-3 px-5 py-3 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/15 transition-all duration-300">
-    <div className="flex items-center justify-center size-10 rounded-full bg-white/10">
-      <TagIcon className="size-5 text-white" />
-    </div>
-    <span className="font-medium text-sm md:text-base text-white">
-      Meehhalee keenya Website, TikTok fi Telegram irrati isin beeksisna
-    </span>
-  </div>
-
-</div>
-
-
-
 
             
           </div>
