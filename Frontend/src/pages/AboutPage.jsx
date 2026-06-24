@@ -14,69 +14,56 @@ function AboutPage() {
     {
       icon: BookOpenIcon,
       title: "SEENA ",
-       description:"Nuti mani daldala meeshalee mana charu daldala  kana kan eegaleef meeshaleen qulqulina qaban haawasa magaala keenya fi naanawa  baadiya ishee meeshale qulqulu gati madalaawan bakka jirani fi qaaman nu bira dhufani akk argatanifidha.",
-      color: "text-blue-500"
+       description:"Mani supha fi Gurgurtaa electronics Fira kan eegaleef supha meeshalee electronics fi meeshalee electronics haara qulqulinaa isaani eegatan haawasa magaala leemani fi naanawa isheetif akkata fedhi maamiltoota gidugaleefateen dhiyeesudha.  ",
+      color: "text-blue-500",
     },
     {
       icon: TargetIcon,
       title: "Kaayoon Keenya",
       // description: "To provide affordable, trusted, and convenient shopping experiences for every customer.",
-      description:"Meeshalee qulqulina isaani eegatan, amanama fi fudhatama haawasa keenya birati qaban maamiltoota keenya hundaaf dhiyeesudha.",
+      description:"Supha fi Gurgurtaa meeshalee electronics ogummaa irrati hunda'ee qulqulina olaana fi amanamumadhaan keennudhaa.",
       color: "text-green-500"
     },
     {
       icon: CheckCircleIcon,
       title: "Maaliif nu filatu",
       features: [
-       
-        "Meeshalee qulqulina isaani eegatan waan dhiyeesinufi",
-        "Hatataman dhiyeesi waan goonuf",
+        "Supha meeshalee electronics garagara guutu waan goonuf",
+        "Meeshalee Electronics haara waan qabnuuf",
         "Maamiltoota keenyaf dursa waan keninuuf",
         "Feedhi maamiltoota keeny waan eegnuuf",
-        "Bakka jirtan teesani ajajachu waan dandeesanif ",
-        "Bakka jirtaniti isiif waan dhiyeesinuuf",
-        "DHiyeesi meeshale jilma/baay'ina waan goonuf",
-        "Afooshaf dhiyeesi meesha guutu  bakka tokkoti waan goonuf"
-
-     
       ],
       color: "text-purple-500"
     },
     {
       icon: ShieldCheckIcon,
       title: "Qulqulina Meeshalee Keenya",
-      description:"Meeshaleen keenya hundi isaani maamiltoota keenyaf osoo hin dhiyeesin dura qulqulinni isaani kaan mirkana'aniidha. ",
+      description:"Mani Supha fi Gurgurtaa meeshalee electronics Fira dhiyeesa meeshalee haawasa osoo hin godhiin dura qulqulinni isaani kan mirkana'eedha ",
       color: "text-orange-500"
     },
     {
       icon: UsersIcon,
       title: "Gargaarsa hawaasa",
       // description: "We work with local suppliers and businesses to strengthen our community economy.",
-      description:"Nuti dhiyeesitoota fi daldaltoota naannoo keenya waalin taane hawaasni meeshalee qulqulina qaban argachuun dinagde isani akka foyeesan gargaarudha.",
-      features: [
-        "daldaltoota naannoo jajabeesu",
-        "daldaltoota naannoo beeksisu",
-        "daldaltootaf meeshalee dhiyeesun carra hoji uumuu"
-      ],
-      color: "text-teal-500"
+      description:"Mani suphaa fi Gurgurtaa meeshalee electronics Fira ogummaa yeroo dheeraa kan qabu yoo ta'u suphaa meeshalee electronicsin  gahuumsa olaana kan  argateedhaa. sanaanis hawaasa magaala leemani fi naanawa isheetif tajaajila amansiisa, si'ata ,qulqulu gahuumsa barnoota yeroo dheeraan argateen hawaasa tajaajilu irrati argama.",
     },
     {
       icon: TruckIcon,
       title: "Dhiyeesi keenya",
  
-      description:"Nuti dhiyeesi ajaja baay'inaanis ta'ee xiqqeenyan safisan, of eeganoon fi amanamuman maamiltoota keenya maraaf ni keenina.",
+      description:"Nuti mani suphaa fi Gurgurtaa meeshalee electronics Fira dhiyeessi meeshalee electronics haara fi suphaa garagara ni qabna. kanneen muraasni isaani",
+      features: [
+        "Eelee biddeena fi daaboo",
+        "Istoovi garagaraa",
+        "Maashinaa buna, shunkurti, juusi fi kanneen biro",
+        "Suphaa mobile fi memory irrati musiqa fee'u",
+        "Diishi TV sirreesu fi hidhu",
+        "Generetor fi ispikeeri sagaanta garaagaraf kireesu",
+        "Electric hidhu fi sirreesu"
+      ],
       color: "text-indigo-500"
     },
-    {
-      icon: CreditCardIcon,
-      title: "Kaafalti filaanoo garagara",
-      features: [
-        "Kaashidhan kafalu",
-        "Qoqodatani kafalu",
-        "moobil transfer"
-      ],
-      color: "text-pink-500"
-    },
+ 
     {
       icon: GiftIcon,
       title: "Amanamuumma fi badhaasa",
@@ -91,11 +78,11 @@ function AboutPage() {
       <div className="text-center max-w-3xl mx-auto mb-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">WAAY'EE KEENYA</h1>
         <p className="text-lg text-base-content/70">
-          Kaayoon mana gurgurta meeshalee mana Charu ,Ergamni fi kutannoon is hawaasa magaala leemani fi naanawa baadiyaa ishee meeshalee mana fi kanneen biro gati madalaawa taa'een dhiyeesufidha.
+          Mani supha fi gurgurtaa electronics Fira ogummaa barnootan yeroo dheeraan ergateen taajajila suphaa meeshalee electronics garaagara bifa qulqulina is eegaten kennu irrati kan argamuudha. 
         </p>
 
         <br/>
-        <p className="text-lg text-base-content/70" >Tajajila isaa kananis hawaasa magaala leemani fi naanawa baadiyaa isheetin fudhatama guddaa kan argateedha.</p>
+        <p className="text-lg text-base-content/70" >Tajajila isaa kananis hawaasa magaala leemani fi naanawa isheetin fudhatama guddaa kan argateedha.</p>
 
         
       </div>
@@ -161,22 +148,7 @@ function AboutPage() {
         })}
       </div>
 
-      {/* CTA Section */}
-      <div className="text-center mt-16 p-8 bg-base-100 rounded-box shadow-lg max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4">Hawaasa keenya qunama</h2>
-        <p className="text-base-content/70 mb-6">
-         Koota daldaltoota keenya muuxano garagara qaban waalin muuxano waljijira , walin hojadhati maamiltoota keessan gammachiisa
-        </p>
-        
-        <div className="flex flex-wrap justify-center gap-4">
-          <a href="/" className="btn btn-primary">
-            daldala jalqaba
-          </a>
-          <a href="/contact" className="btn btn-outline">
-            Asin nu qunama
-          </a>
-        </div>
-      </div>
+      
 
       {/* Stats Section */}
       <div className="stats stats-vertical lg:stats-horizontal shadow mt-16 w-full max-w-4xl mx-auto">
@@ -198,7 +170,7 @@ function AboutPage() {
             </svg>
           </div>
           <div className="stat-title">Meeshalee dhiyeesine</div>
-          <div className="stat-value text-secondary">4000+</div>
+          <div className="stat-value text-secondary">3000+</div>
           <div className="stat-desc">safisan fi amanamuman</div>
         </div>
         
@@ -209,7 +181,7 @@ function AboutPage() {
             </svg>
           </div>
           <div className="stat-title">Hawaasa tajajilee</div>
-          <div className="stat-value text-accent">5000+</div>
+          <div className="stat-value text-accent">6000+</div>
 
         </div>
       </div>
