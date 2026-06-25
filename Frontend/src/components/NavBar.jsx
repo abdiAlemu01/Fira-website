@@ -93,11 +93,11 @@ function NavBar() {
                   <>
                     <button
                       type="button"
-                      className="fixed inset-0 z-40 bg-black/20 lg:hidden"
+                      className="fixed inset-0 z-[55] bg-black/20 lg:hidden"
                       aria-label="Close menu"
                       onClick={() => setMobileMenuOpen(false)}
                     />
-                    <ul className="absolute right-0 top-full z-50 menu p-3 shadow-xl bg-base-100 rounded-box w-64 mt-2 border border-base-300">
+                    <ul className="absolute right-0 top-full z-[60] menu p-3 shadow-xl bg-base-100 rounded-box w-64 mt-2 border border-base-300">
                       {navLinks.map((link) => (
                         <li key={link.path}>
                           <Link 
@@ -121,15 +121,30 @@ function NavBar() {
                 <NotificationBell />
                 <ThemeSelector />
                 {user ? (
-                  <div className="flex items-center gap-2 rounded-full border border-base-300 px-3 py-2 bg-base-100">
-                    <ShieldCheckIcon className="size-4 text-primary" />
-                    <div className="text-sm leading-tight hidden sm:block">
-                      <div className="font-semibold">{user.full_name}</div>
-                      <div className="text-base-content/60 capitalize">{user.role}</div>
-                    </div>
-                    <button type="button" className="btn btn-sm btn-ghost" onClick={logout}>
-                      <LogOutIcon className="size-4" />
-                    </button>
+                  <div className="dropdown dropdown-end">
+                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                      <div className="w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                        <ShieldCheckIcon className="size-5 text-primary" />
+                      </div>
+                    </label>
+                    <ul tabIndex={0} className="mt-3 z-[60] p-2 shadow-xl menu menu-compact dropdown-content bg-base-100 rounded-box w-64 border border-base-300">
+                      <li className="menu-title">
+                        <span className="text-base font-bold">{user.full_name}</span>
+                      </li>
+                      <li className="disabled">
+                        <span className="text-xs text-base-content/60 capitalize flex items-center gap-2">
+                          <ShieldCheckIcon className="size-4" />
+                          {user.role}
+                        </span>
+                      </li>
+                      <div className="divider my-1"></div>
+                      <li>
+                        <button type="button" onClick={logout} className="text-error hover:bg-error/10">
+                          <LogOutIcon className="size-4" />
+                          Ba'i
+                        </button>
+                      </li>
+                    </ul>
                   </div>
                 ) : (
                   <button
