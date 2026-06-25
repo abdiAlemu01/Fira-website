@@ -132,7 +132,7 @@ function ServicesPage() {
                   {/* Image or Icon */}
                   {service.image ? (
                     <div className="flex justify-center mb-4 rounded-xl overflow-hidden bg-base-200/50">
-                      <img src={service.image} alt={service.title} className="w-full h-72 object-contain transition-transform duration-500 group-hover:scale-105" />
+                      <img src={service.image} alt={service.title} className="w-full h-48 sm:h-64 lg:h-72 object-contain transition-transform duration-500 group-hover:scale-105" />
                     </div>
                   ) : (
                     <div className="flex justify-center mb-4">

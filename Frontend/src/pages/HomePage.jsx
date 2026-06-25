@@ -66,7 +66,7 @@ function HomePage() {
 
   return (
     <div className="min-h-screen bg-base-300">
-      <div className="relative w-full h-screen flex items-center justify-center bg-base-200 overflow-hidden">
+      <div className="relative w-full h-[50vh] sm:h-[70vh] lg:h-screen flex items-center justify-center bg-base-200 overflow-hidden">
         <img 
           src="/fiira.png" 
           alt="Logo" 
