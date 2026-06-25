@@ -20,7 +20,7 @@ function NavBar() {
     { name: "Waay'ee keenya", path: '/about' },
     { name: 'Tajaajiloota', path: '/services' },
     { name: 'Nu Qunamuuf', path: '/contact' },
-    { name: 'Meesha ajajachuuf', path: '/track-order' },
+    { name: "Galma'a ajajadha", path: '/track-order' },
   ];
 
   useEffect(() => {

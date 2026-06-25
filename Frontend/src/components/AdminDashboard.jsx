@@ -8,6 +8,7 @@ import {
   UsersIcon,
   ImageOffIcon,
   MessageCircleIcon,
+  EditIcon,
 } from "lucide-react";
 import { useCommerceStore } from "../store/useCommerceStore";
 import { useNotificationStore } from "../store/useNotificationStore";
@@ -26,6 +27,12 @@ function AdminDashboard() {
     message: "",
     discountPercent: "",
   });
+  const [editingMessage, setEditingMessage] = useState(null);
+  const [editMessageForm, setEditMessageForm] = useState({
+    name: "",
+    phone: "",
+    message: "",
+  });
 
   const {
     adminOrders,
@@ -40,6 +47,7 @@ function AdminDashboard() {
     deleteOrder,
     updateOrderStatus,
     deleteContactMessage,
+    updateContactMessage,
     loadingOrders,
     loadingLookup,
     loadingCustomers,
@@ -108,6 +116,23 @@ function AdminDashboard() {
     fetchNotifications();
   };
 
+  const handleEditMessage = (msg) => {
+    setEditingMessage(msg);
+    setEditMessageForm({
+      name: msg.name,
+      phone: msg.phone,
+      message: msg.message,
+    });
+  };
+
+  const handleUpdateMessage = async (e) => {
+    e.preventDefault();
+    if (!editingMessage) return;
+    await updateContactMessage(editingMessage.id, editMessageForm);
+    setEditingMessage(null);
+    setEditMessageForm({ name: "", phone: "", message: "" });
+  };
+
   const OrderImage = ({ image, name, isCustom }) => {
     const [hasError, setHasError] = useState(false);
 
@@ -141,10 +166,7 @@ function AdminDashboard() {
               <UsersIcon className="size-6 text-primary" />
             </div>
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold">All Registered Customers</h2>
-              <p className="text-base-content/60 text-sm">
-                View all customers registered in the system.
-              </p>
+              <h2 className="text-xl sm:text-2xl font-bold">Maamailtoota galma'an hundaa</h2>
             </div>
           </div>
 
@@ -174,16 +196,25 @@ function AdminDashboard() {
           ) : (
             <div className="flex flex-col items-center justify-center py-12 text-center">
               <UsersIcon className="size-12 text-base-content/30 mb-3" />
-              <p className="text-base-content/60">No customers registered yet.</p>
+              <p className="text-base-content/60">Maamiltootni galma'an hin jiran.</p>
             </div>
           )}
         </div>
       </div>
 
+
+
+
+
+
+      
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="card bg-base-100 shadow-lg border border-base-300/60">
+
+
           <div className="card-body">
-            <div className="flex items-center gap-3 mb-4">
+            {/* <div className="flex items-center gap-3 mb-4">
               <div className="size-12 rounded-2xl bg-primary/10 flex items-center justify-center">
                 <UsersIcon className="size-6 text-primary" />
               </div>
@@ -193,9 +224,9 @@ function AdminDashboard() {
                   Search customers by phone number and attach promotions.
                 </p>
               </div>
-            </div>
+            </div> */}
 
-            <form onSubmit={handleSearchCustomer} className="flex flex-col md:flex-row gap-3">
+            {/* <form onSubmit={handleSearchCustomer} className="flex flex-col md:flex-row gap-3">
               <input
                 type="tel"
                 className="input input-bordered flex-1"
@@ -207,11 +238,11 @@ function AdminDashboard() {
                 <PhoneCallIcon className="size-4" />
                 Search
               </button>
-            </form>
+            </form> */}
 
             {customerLookup && (
               <div className="mt-6 space-y-4">
-                <div className="rounded-2xl bg-base-200 p-4">
+                {/* <div className="rounded-2xl bg-base-200 p-4">
                   <div className="flex flex-wrap items-center justify-between gap-3">
                     <div>
                       <h3 className="font-bold text-lg">{customerLookup.customer.full_name}</h3>
@@ -223,8 +254,8 @@ function AdminDashboard() {
                       {customerLookup.totalOrders} Orders
                     </div>
                   </div>
-                </div>
-
+                </div> */}
+{/* 
                 <form onSubmit={handleCreatePromotion} className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input
@@ -275,7 +306,7 @@ function AdminDashboard() {
                     <GiftIcon className="size-4" />
                     Add Promotion
                   </button>
-                </form>
+                </form> */}
 
                 <div className="space-y-3">
                   <h4 className="font-semibold">Saved Promotions</h4>
@@ -314,7 +345,7 @@ function AdminDashboard() {
                 <ShieldCheckIcon className="size-6 text-secondary" />
               </div>
               <div>
-                <h2 className="text-xl sm:text-2xl font-bold">Ajaaja maamiltootaa dhihoo</h2>
+                <h2 className="text-xl sm:text-2xl font-bold">Ajaaja maamiltootaa keeti</h2>
                 <p className="text-base-content/60 text-sm">
                   Ajaaja maamiltoonni ergan hunda ilaali, fudhadhu yookin didi.
                 </p>
@@ -484,6 +515,82 @@ function AdminDashboard() {
         </div>
       )}
 
+      {editingMessage && (
+        <div className="modal modal-open">
+          <div className="modal-box">
+            <h3 className="font-bold text-lg mb-2">Eerga Sarfuu</h3>
+            <form onSubmit={handleUpdateMessage} className="space-y-4">
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Maqaa</span>
+                </label>
+                <input
+                  type="text"
+                  className="input input-bordered w-full"
+                  value={editMessageForm.name}
+                  onChange={(e) =>
+                    setEditMessageForm({ ...editMessageForm, name: e.target.value })
+                  }
+                  required
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Lakkoofsa Bilbila</span>
+                </label>
+                <input
+                  type="tel"
+                  className="input input-bordered w-full"
+                  value={editMessageForm.phone}
+                  onChange={(e) =>
+                    setEditMessageForm({ ...editMessageForm, phone: e.target.value })
+                  }
+                  required
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Erga</span>
+                </label>
+                <textarea
+                  className="textarea textarea-bordered w-full"
+                  value={editMessageForm.message}
+                  onChange={(e) =>
+                    setEditMessageForm({ ...editMessageForm, message: e.target.value })
+                  }
+                  required
+                  rows={3}
+                />
+              </div>
+              <div className="modal-action">
+                <button
+                  type="button"
+                  className="btn btn-ghost"
+                  onClick={() => {
+                    setEditingMessage(null);
+                    setEditMessageForm({ name: "", phone: "", message: "" });
+                  }}
+                >
+                  {LABELS.cancel}
+                </button>
+                <button type="submit" className="btn btn-primary">
+                  Sarfuu
+                </button>
+              </div>
+            </form>
+          </div>
+          <button
+            type="button"
+            className="modal-backdrop"
+            aria-label="Close"
+            onClick={() => {
+              setEditingMessage(null);
+              setEditMessageForm({ name: "", phone: "", message: "" });
+            }}
+          />
+        </div>
+      )}
+
       {/* Customer Messages Section */}
       <div className="card bg-base-100 shadow-lg border border-base-300/60">
         <div className="card-body">
@@ -526,16 +633,24 @@ function AdminDashboard() {
                         })}
                       </p>
                     </div>
-                    <button
-                      onClick={() => {
-                        if (window.confirm("Eergan kun balleessuu barbaadda?")) {
-                          deleteContactMessage(msg.id);
-                        }
-                      }}
-                      className="btn btn-sm btn-ghost btn-error"
-                    >
-                      <Trash2Icon className="size-4" />
-                    </button>
+                    <div className="flex gap-1">
+                      <button
+                        onClick={() => handleEditMessage(msg)}
+                        className="btn btn-sm btn-ghost btn-info"
+                      >
+                        <EditIcon className="size-4" />
+                      </button>
+                      <button
+                        onClick={() => {
+                          if (window.confirm("Eergan kun balleessuu barbaadda?")) {
+                            deleteContactMessage(msg.id);
+                          }
+                        }}
+                        className="btn btn-sm btn-ghost btn-error"
+                      >
+                        <Trash2Icon className="size-4" />
+                      </button>
+                    </div>
                   </div>
                   <div className="bg-base-200 rounded-xl p-3 mt-2">
                     <p className="text-sm text-base-content">{msg.message}</p>

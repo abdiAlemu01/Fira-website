@@ -25,7 +25,7 @@ function ContactPage() {
       setTimeout(() => setSubmitSuccess(false), 3000);
     } catch (error) {
       console.error("Error sending message:", error);
-      alert("Erga ergaa fayyadamaa jiru. Fayyadamiin deebiin yaadachi.");
+      alert("Ergaan keessan hin milkoofnee \n netwoorki keessan mirkaneefadha yaala ?");
     } finally {
       setIsSubmitting(false);
     }
@@ -92,7 +92,7 @@ function ContactPage() {
                 <h2 className="card-title text-2xl mb-4">Kara erga gababaf</h2>
                 {submitSuccess && (
                   <div className="alert alert-success mb-4">
-                    <span>Erga keessan ergadheeraa! Fayyadamaan deebiin yaadachi.</span>
+                    <span>Erga keessan ergadheeraa!.</span>
                   </div>
                 )}
                 <form onSubmit={handleSubmit} className="space-y-4">

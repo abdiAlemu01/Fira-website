@@ -16,8 +16,6 @@ import { useProductStore } from "../store/useProductStore";
 import { useAuthStore } from "../store/useAuthStore";
 import ProductCard from "../components/ProductCard";
 import AddProductModal from "../components/AddProductModal";
-import AdminDashboard from "../components/AdminDashboard";
-import Footer from "../components/Footer";
 
 function HomePage() {
   const navigate = useNavigate();
@@ -77,8 +75,6 @@ function HomePage() {
       </div>
 
       <main className="max-w-7xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
-        {isAdmin && <AdminDashboard />}
-
         <div className="bg-base-100 rounded-box shadow-lg p-3 sm:p-4 mb-6 sm:mb-8">
           <div className="flex flex-col gap-3 sm:gap-4 md:flex-row md:items-center">
 
@@ -146,7 +142,7 @@ function HomePage() {
           <div className="space-y-4 sm:space-y-6">
             <div className="flex items-center justify-center sm:justify-start gap-3">
               <div className="loading loading-spinner loading-md text-primary" />
-              <p className="text-base-content/70 text-sm sm:text-base">meeshan mul'achuuuf jira...</p>
+              <p className="text-base-content/70 text-sm sm:text-base">Mal'achuuf jira eega...</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
               {Array.from({ length: 4 }).map((_, index) => (
@@ -178,8 +174,6 @@ function HomePage() {
           )
         )}
       </main>
-
-      <Footer />
     </div>
   );
 }

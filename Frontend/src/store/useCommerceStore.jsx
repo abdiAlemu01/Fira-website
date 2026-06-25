@@ -235,4 +235,27 @@ export const useCommerceStore = create((set) => ({
       throw error;
     }
   },
+
+  updateContactMessage: async (messageId, { name, phone, message }) => {
+    try {
+      const response = await axios.patch(
+        `${BASE_URL}/api/messages/${messageId}`,
+        { name, phone, message },
+        { headers: getAuthHeaders() }
+      );
+
+      set((state) => ({
+        contactMessages: state.contactMessages.map((msg) =>
+          msg.id === messageId ? { ...msg, ...response.data.data } : msg
+        ),
+      }));
+
+      toast.success("Message updated successfully");
+      return response.data.data;
+    } catch (error) {
+      const message = error.response?.data?.message || "Unable to update message";
+      toast.error(message);
+      throw error;
+    }
+  },
 }));

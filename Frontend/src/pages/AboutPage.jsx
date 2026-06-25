@@ -14,7 +14,7 @@ function AboutPage() {
     {
       icon: BookOpenIcon,
       title: "SEENA ",
-       description:"Mani supha fi Gurgurtaa electronics Fira kan eegaleef supha meeshalee electronics fi meeshalee electronics haara qulqulinaa isaani eegatan haawasa magaala leemani fi naanawa isheetif akkata fedhi maamiltoota gidugaleefateen dhiyeesudha.  ",
+       description:"Mani supha fi Gurgurtaa electronics Fira kan eegaleef supha meeshalee electronics fi meeshalee electronics haara qulqulinaa isaani eegatan haawasa magaala leemani fi naanawa isheetif akkata fedhi maamiltoota giddugaleefateen dhiyeesudha.  ",
       color: "text-blue-500",
     },
     {
@@ -38,7 +38,7 @@ function AboutPage() {
     {
       icon: ShieldCheckIcon,
       title: "Qulqulina Meeshalee Keenya",
-      description:"Mani Supha fi Gurgurtaa meeshalee electronics Fira dhiyeesa meeshalee haawasa osoo hin godhiin dura qulqulinni isaani kan mirkana'eedha ",
+      description:"Mani Supha fi Gurgurtaa meeshalee electronics Fira dhiyeesa meeshalee hawaasaf osoo hin godhiin dura qulqulinna isaani kan mirkaneefatudha ",
       color: "text-orange-500"
     },
     {
@@ -53,9 +53,9 @@ function AboutPage() {
  
       description:"Nuti mani suphaa fi Gurgurtaa meeshalee electronics Fira dhiyeessi meeshalee electronics haara fi suphaa garagara ni qabna. kanneen muraasni isaani",
       features: [
-        "Eelee biddeena fi daaboo",
-        "Istoovi garagaraa",
-        "Maashinaa buna, shunkurti, juusi fi kanneen biro",
+        "Suphaa eelee biddeena fi daaboo",
+        "Suphaa istoovi garagaraa",
+        "Suphaa maashinaa buna, shunkurti, juusi fi kanneen biro",
         "Suphaa mobile fi memory irrati musiqa fee'u",
         "Diishi TV sirreesu fi hidhu",
         "Generetor fi ispikeeri sagaanta garaagaraf kireesu",

@@ -13,12 +13,12 @@ function Footer() {
                 <PackageIcon className="size-6 text-primary-content" />
               </div>
               <div>
-                <h3 className="font-bold text-lg">Mana supha fi</h3>
-                <p className="text-sm font-semibold">Gurgurtaa meeshalee electronics Fira</p>
+                <h3 className="font-bold text-lg">Mana Supha fi</h3>
+                <p className="text-sm font-semibold">Gurgurta electronics Fira </p>
               </div>
             </div>
             <p className="text-sm text-base-content/70 leading-relaxed">
-              Karaa social media mana supha fi gurgurtaa electronics firan nu qunamu dandeesu.
+              Mana gurgurta meeshalee mana amaansiisa kara online fi qaaman ni kenina
             </p>
             
             <div className="flex gap-3">
@@ -53,7 +53,7 @@ function Footer() {
           <div className="space-y-4">
             <h4 className="font-bold text-lg flex items-center gap-2">
               <span className="text-primary">●</span>
-              Kara baafata fuula safisa
+              Kara qunamti safisa
             </h4>
             <ul className="space-y-2">
               <li>
@@ -78,7 +78,7 @@ function Footer() {
               </li>
               <li>
                 <a href="/track-order" className="text-base-content/70 hover:text-primary transition-colors flex items-center gap-2">
-                  <span className="text-xs">▸</span> Meesha ajajuuf
+                  <span className="text-xs">▸</span> Galma'a ajajadha
                 </a>
               </li>
             </ul>
@@ -93,24 +93,38 @@ function Footer() {
             <ul className="space-y-2">
               <li className="text-base-content/70 flex items-center gap-2">
                 <TruckIcon className="size-4 text-primary" />
-                Supha stove fi haara.
+                suphaa eelee biddeena fi daaboo
               </li>
               <li className="text-base-content/70 flex items-center gap-2">
                 <ShieldCheckIcon className="size-4 text-primary" />
-                 Dishii sirreesu fi Hidhu.
+                Suphaa Istoovi garagaraa
               </li>
               <li className="text-base-content/70 flex items-center gap-2">
                 <TagIcon className="size-4 text-primary" />
-                Maashina buna, shunkurti fi Juusi haara fi supha isaani.
+                   Suphaa Maashinaa buna, shunkurti, juusi fi kanneen biro
               </li>
                <li className="text-base-content/70 flex items-center gap-2">
                 <TagIcon className="size-4 text-primary" />
-                Memory irraati Musiqa fee'u.
+                   Suphaa mobile fi memory irrati musiqa fee'u
+              </li>
+               <li className="text-base-content/70 flex items-center gap-2">
+                <TagIcon className="size-4 text-primary" />
+                   Suphaa mobile fi memory irrati musiqa fee'u
               </li>
               <li className="text-base-content/70 flex items-center gap-2">
                 <TagIcon className="size-4 text-primary" />
-                 Eelee bideena, daabo haara fi supha isaani.
+                   Diishi TV sirreesu fi hidhu
               </li>
+                <li className="text-base-content/70 flex items-center gap-2">
+                <TagIcon className="size-4 text-primary" />
+                    Generetor fi ispikeeri sagaanta garaagaraf kireesu
+              </li>
+               <li className="text-base-content/70 flex items-center gap-2">
+                <TagIcon className="size-4 text-primary" />
+                     Electric hidhu fi sirreesuu
+              </li>
+                
+                
             </ul>
           </div>
 
@@ -138,7 +152,7 @@ function Footer() {
                 <div>
                   <p className="font-medium text-sm">Iddon argama keenya</p>
                   <p className="text-base-content/70 text-sm leading-relaxed">
-                    Maagala Leeman faarmasi Taade fuuldura 
+                    Magaala leeman faarmasi taade fuldurati argamna
                   </p>
                 </div>
               </li>

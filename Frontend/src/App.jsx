@@ -1,5 +1,6 @@
 // app.jsx
 import NavBar from "./components/NavBar"
+import Footer from "./components/Footer"
 import HomePage from "./pages/HomePage"
 import ProductPage from "./pages/ProductPage"
 import AboutPage from "./pages/AboutPage"
@@ -13,7 +14,7 @@ import { Toaster } from 'react-hot-toast'
 function App() {
   const {theme}=useThemeStore()
   return (
-    <div className='min-h-screen bg-base-200 transition-colors duration-300' data-theme={theme}>
+    <div className='min-h-screen bg-base-200 transition-colors duration-300 flex flex-col' data-theme={theme}>
       <NavBar/>
       <Routes>
         <Route path='/' element={<HomePage/>}/>
@@ -23,9 +24,10 @@ function App() {
         <Route path='/contact' element={<ContactPage/>}/>
         <Route path='/track-order' element={<TrackOrderPage/>}/>
       </Routes>
+      <Footer/>
       <Toaster/>
     </div>
-     
+
   )
 }
 
