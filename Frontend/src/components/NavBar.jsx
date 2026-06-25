@@ -118,6 +118,7 @@ function NavBar() {
 
               {/* RIGHT SECTION */}
               <div className="flex-none flex items-center gap-1 sm:gap-2">
+                {/* Desktop: Always show notifications and theme */}
                 <div className="hidden sm:flex items-center gap-2">
                   <NotificationBell />
                   <ThemeSelector />
@@ -125,7 +126,7 @@ function NavBar() {
                 
                 {user ? (
                   <div className="dropdown dropdown-end">
-                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                    <label tabIndex={0} className="btn btn-ghost btn-circle btn-sm sm:btn-md avatar">
                       <div className="w-8 sm:w-10 rounded-full bg-primary/10 flex items-center justify-center">
                         <ShieldCheckIcon className="size-4 sm:size-5 text-primary" />
                       </div>
@@ -141,8 +142,30 @@ function NavBar() {
                         </span>
                       </li>
                       <div className="divider my-1"></div>
+                      
+                      {/* Mobile-only: Show notification and theme in dropdown */}
+                      <div className="sm:hidden">
+                        <li className="pointer-events-none">
+                          <div className="flex items-center justify-between py-2">
+                            <span className="text-xs font-medium">Beeksisa</span>
+                            <div className="pointer-events-auto">
+                              <NotificationBell />
+                            </div>
+                          </div>
+                        </li>
+                        <li className="pointer-events-none">
+                          <div className="flex items-center justify-between py-2">
+                            <span className="text-xs font-medium">Theme</span>
+                            <div className="pointer-events-auto">
+                              <ThemeSelector />
+                            </div>
+                          </div>
+                        </li>
+                        <div className="divider my-1"></div>
+                      </div>
+                      
                       <li>
-                        <button type="button" onClick={logout} className="text-error hover:bg-error/10 flex items-center gap-2">
+                        <button type="button" onClick={logout} className="text-error hover:bg-error/10 flex items-center gap-2 py-3">
                           <LogOutIcon className="size-4 flex-shrink-0" />
                           <span>Ba'i</span>
                         </button>
@@ -150,14 +173,22 @@ function NavBar() {
                     </ul>
                   </div>
                 ) : (
-                  <button
-                    type="button"
-                    className="btn btn-primary btn-sm px-2 sm:px-4"
-                    onClick={() => document.getElementById("auth_modal")?.showModal()}
-                  >
-                    <LogInIcon className="size-4" />
-                    <span className="hidden sm:inline ml-1">SEENA</span>
-                  </button>
+                  <>
+                    {/* Mobile: Show notifications and theme when NOT logged in */}
+                    <div className="flex sm:hidden items-center gap-1">
+                      <NotificationBell />
+                      <ThemeSelector />
+                    </div>
+                    
+                    <button
+                      type="button"
+                      className="btn btn-primary btn-sm px-2 sm:px-4"
+                      onClick={() => document.getElementById("auth_modal")?.showModal()}
+                    >
+                      <LogInIcon className="size-4" />
+                      <span className="hidden sm:inline ml-1">SEENA</span>
+                    </button>
+                  </>
                 )}
                 
                 {isHomePage && (
@@ -170,11 +201,6 @@ function NavBar() {
                     </div>
                   </Link>
                 )}
-                
-                <div className="flex sm:hidden items-center gap-1 ml-1">
-                  <NotificationBell />
-                  <ThemeSelector />
-                </div>
               </div>
 
             </div>
