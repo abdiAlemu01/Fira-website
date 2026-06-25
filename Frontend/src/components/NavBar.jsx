@@ -34,18 +34,18 @@ function NavBar() {
   return (
     <div className='bg-base-100/95 backdrop-blur-md border-b border-base-content/10 sticky top-0 z-50 shadow-sm'>
         <div className='max-w-7xl mx-auto'>
-            <div className='navbar px-3 sm:px-4 py-2 sm:py-3 min-h-[4rem] sm:min-h-[5rem]'>
+            <div className='navbar px-2 sm:px-4 py-2 sm:py-3 min-h-[4rem] sm:min-h-[5rem]'>
 
               {/* LOGO */}
               <div className="flex-none">
                 <Link to="/" className="hover:opacity-80 transition-opacity" onClick={handleNavLinkClick}>
-                  <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="flex items-center gap-1.5 sm:gap-3">
                     <img 
                       src="/aa.jpg" 
                       alt="Company Logo" 
-                      className="size-12 sm:size-16 md:size-14 rounded-full object-cover shadow-md ring-2 ring-primary/20" 
+                      className="size-10 sm:size-12 md:size-14 rounded-full object-cover shadow-md ring-2 ring-primary/20 flex-shrink-0" 
                     />
-                    <div className="flex flex-col min-w-0">
+                    <div className="hidden sm:flex flex-col min-w-0">
                       <span className="font-bold text-sm sm:text-lg md:text-xl leading-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary truncate">
                        
                       </span>
@@ -117,31 +117,34 @@ function NavBar() {
               </div>
 
               {/* RIGHT SECTION */}
-              <div className="flex-none flex items-center gap-1.5 sm:gap-3">
-                <NotificationBell />
-                <ThemeSelector />
+              <div className="flex-none flex items-center gap-1 sm:gap-2">
+                <div className="hidden sm:flex items-center gap-2">
+                  <NotificationBell />
+                  <ThemeSelector />
+                </div>
+                
                 {user ? (
                   <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                      <div className="w-10 rounded-full bg-primary/10 flex items-center justify-center">
-                        <ShieldCheckIcon className="size-5 text-primary" />
+                      <div className="w-8 sm:w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                        <ShieldCheckIcon className="size-4 sm:size-5 text-primary" />
                       </div>
                     </label>
-                    <ul tabIndex={0} className="mt-3 z-[60] p-2 shadow-xl menu menu-compact dropdown-content bg-base-100 rounded-box w-64 border border-base-300">
-                      <li className="menu-title">
-                        <span className="text-base font-bold">{user.full_name}</span>
+                    <ul tabIndex={0} className="mt-3 z-[60] p-3 shadow-xl menu menu-compact dropdown-content bg-base-100 rounded-box w-56 sm:w-64 border border-base-300">
+                      <li className="menu-title px-2 py-1">
+                        <span className="text-sm sm:text-base font-bold truncate">{user.full_name}</span>
                       </li>
-                      <li className="disabled">
+                      <li className="disabled px-2 py-1">
                         <span className="text-xs text-base-content/60 capitalize flex items-center gap-2">
-                          <ShieldCheckIcon className="size-4" />
-                          {user.role}
+                          <ShieldCheckIcon className="size-4 flex-shrink-0" />
+                          <span className="truncate">{user.role}</span>
                         </span>
                       </li>
                       <div className="divider my-1"></div>
                       <li>
-                        <button type="button" onClick={logout} className="text-error hover:bg-error/10">
-                          <LogOutIcon className="size-4" />
-                          Ba'i
+                        <button type="button" onClick={logout} className="text-error hover:bg-error/10 flex items-center gap-2">
+                          <LogOutIcon className="size-4 flex-shrink-0" />
+                          <span>Ba'i</span>
                         </button>
                       </li>
                     </ul>
@@ -149,23 +152,29 @@ function NavBar() {
                 ) : (
                   <button
                     type="button"
-                    className="btn btn-primary btn-sm px-2 sm:px-3"
+                    className="btn btn-primary btn-sm px-2 sm:px-4"
                     onClick={() => document.getElementById("auth_modal")?.showModal()}
                   >
                     <LogInIcon className="size-4" />
-                    <span className="hidden sm:inline">SEENA</span>
+                    <span className="hidden sm:inline ml-1">SEENA</span>
                   </button>
                 )}
+                
                 {isHomePage && (
                   <Link to="/" className="indicator" onClick={handleNavLinkClick}>
-                    <div className="btn btn-ghost btn-circle hover:bg-primary/10">
-                      <ShoppingBagIcon className="size-6" />
-                      <span className="badge badge-sm badge-primary indicator-item font-bold">
+                    <div className="btn btn-ghost btn-circle btn-sm sm:btn-md hover:bg-primary/10">
+                      <ShoppingBagIcon className="size-5 sm:size-6" />
+                      <span className="badge badge-xs sm:badge-sm badge-primary indicator-item font-bold">
                         {products?.length} 
                       </span>
                     </div>
                   </Link>
                 )}
+                
+                <div className="flex sm:hidden items-center gap-1 ml-1">
+                  <NotificationBell />
+                  <ThemeSelector />
+                </div>
               </div>
 
             </div>
