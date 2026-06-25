@@ -71,12 +71,12 @@ function ServicesPage() {
     {
       icon: CreditCardIcon,
       title: "Gurgurtaa meeshalee electronics haara ",
-      description: "Gurgurtaa meeshalee electronics haara hedduu kennuu irrati argaama. isaan muraasni:",
+      description: "Gurgurtaa meeshalee electronics haara hedduu kennuu irrati argaamna. isaan muraasni:",
       features: [
         "Eelee biddeena fi daaboo",
         "Istoovi garagaraa",
         "Maashinaa buna, shunkurti, juusi fi kanneen biro",
-        ""
+        
       ]
     },
     {

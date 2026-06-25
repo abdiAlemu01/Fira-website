@@ -152,7 +152,7 @@ function ContactPage() {
                     <PhoneIcon className="size-6 text-primary mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">Lakkoofsa bilbila keenya</h3>
-                      <p className="text-base-content/70">09 74  65 80 33 / 09 54 20 08 29</p>
+                      <p className="text-base-content/70">09 73 96 36 04</p>
                     </div>
                   </div>
                 </div>
@@ -167,7 +167,7 @@ function ContactPage() {
                     </svg>
                     <div>
                       <h3 className="font-semibold mb-1">TikTok</h3>
-                      <p className="text-base-content/70">chare74</p>
+                      <p className="text-base-content/70">fira</p>
                     </div>
                   </div>
                 </div>
@@ -182,7 +182,7 @@ function ContactPage() {
                     </svg>
                     <div>
                       <h3 className="font-semibold mb-1">Telegram</h3>
-                      <p className="text-base-content/70">@chare74</p>
+                      <p className="text-base-content/70">fira</p>
                     </div>
                   </div>
                 </div>
@@ -195,8 +195,7 @@ function ContactPage() {
                     <div>
                       <h3 className="font-semibold mb-1">Iddon argama keenya</h3>
                         <p className="text-base-content/70 text-sm leading-relaxed">
-                    Maagala Leeman daandii guudda irra<br/>
-                    naanawa agilgillooti cinati argamna.
+                    Maagala Leeman faarmasi Taade fuuldura
                   </p>   
                     </div>
                   </div>
