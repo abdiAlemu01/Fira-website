@@ -64,13 +64,14 @@ function ServicesPage() {
     {
       icon: TrendingUpIcon,
       title: "Electric sirreesu fi hidhu",
-     
+     image: "/elec.png",
       description: "Electric sirreesu fi hidhu kaamiyu ni keenina.",
      
     },
     {
       icon: CreditCardIcon,
       title: "Gurgurtaa meeshalee electronics haara ",
+      image:"/me.png",
       description: "Gurgurtaa meeshalee electronics haara hedduu kennuu irrati argaamna. isaan muraasni:",
       features: [
         "Eelee biddeena fi daaboo",
