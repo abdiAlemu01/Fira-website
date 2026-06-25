@@ -68,7 +68,7 @@ function HomePage() {
     <div className="min-h-screen bg-base-300">
       <div className="relative w-full h-screen flex items-center justify-center bg-base-200 overflow-hidden">
         <img 
-          src="/fiiraa.png" 
+          src="/fiira.png" 
           alt="Logo" 
           className="w-full h-full object-contain"
         />
