@@ -1,0 +1,54 @@
+========================================
+🔥 QUICK FIX FOR "Cannot GET /" ERROR
+========================================
+
+PROBLEM: Your Render backend shows "Cannot GET /" instead of JSON
+
+CAUSE: Your deployed code is outdated. Changes are only on your local computer.
+
+SOLUTION: Push changes to GitHub and redeploy
+
+========================================
+⚡ 3-MINUTE FIX:
+========================================
+
+1. COMMIT AND PUSH:
+   cd c:\Users\Administrator\Desktop\fira-website
+   git add .
+   git commit -m "Fix CORS and add health checks"
+   git push origin main
+
+2. SET ROOT DIRECTORY ON RENDER:
+   Dashboard → Backend Service → Settings
+   → Root Directory: Backend
+   → Save
+
+3. ADD ENVIRONMENT VARIABLES:
+   Dashboard → Backend Service → Environment
+   → Add: FRONTEND_URL=https://fira-6ihp.onrender.com
+   → Add all other vars from Backend\.env
+   → Save (triggers auto-deploy)
+
+4. WAIT 3 MINUTES FOR DEPLOYMENT
+
+5. TEST:
+   Visit: https://fira-website.onrender.com/
+   Should see: {"status":"ok","message":"Fira API is running",...}
+
+6. CONFIGURE FRONTEND:
+   Dashboard → Frontend Service → Environment
+   → Add: VITE_API_URL=https://fira-website.onrender.com
+   → Save
+
+7. DONE! 
+   Your app should work at: https://fira-6ihp.onrender.com
+
+========================================
+
+⚠️  MOST IMPORTANT:
+   Set "Root Directory" to "Backend" in Render settings!
+   Without this, nothing will work!
+
+========================================
+
+📖 Full instructions: See DEPLOY.md
