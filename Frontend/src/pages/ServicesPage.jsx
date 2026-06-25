@@ -50,44 +50,33 @@ function ServicesPage() {
     {
       icon: UsersIcon,
       title: "Generator fi ispiikari sagantaa garaagaraf kirreesu",
-      
-      description: "Mani daldala meeshalee mana charu Meeshalee guutuu qulqulina isaani eegatan gatii madalawaadhan Afooshalee hawaasa magaala keenya fi naanawa ishee jiraatanif kennu irrati ergamna. Kanaaf haala mijata kanneen armaan gadi uumne ",
+      image: "/gs.png",
+      description: "Generator fi ispiikari sagantaa garaagaraf kirreesu kaamiyu ni keenina.",
       
     },
     {
       icon: RefreshCwIcon,
       title: "Suphaa mobile fi muuziqa fee'u",
-      description: "Nuti fedhi maamiltoota keenya  giddu galeessa godhachuun jijiraa meeshalee bilisaan guyyaa 2 keessati taasisna .",
-      features: [
-        "Jijiraa bilisa guuya 2 keessati ni rawana",
-        "Jijiraa meesha meeshaadhan guyyaa 2 keessati ni goona",
-        
-      ]
+      image: "/pm.png",
+      description: "Suphaa mobile fi memory irrati muziqaa fee'u kaamiyu ni keenina.",
+      
     },
     {
       icon: TrendingUpIcon,
       title: "Electric sirreesu fi hidhu",
-      description: "Mani daldala meeshalee keenya daldaaltootaf meeshalee mana fi kanneen biro gati madalaawadhan dhiyeesu irrati kan argamuudha.",
-      features: [
-        // "Competitive commission rates",
-        // "Marketing and promotional support",
-        // "Dedicated seller dashboard",
-        // "Easy product listing",
-        // "Secure payment processing",
-        // "Business analytics & insights"
-      ]
+     
+      description: "Electric sirreesu fi hidhu kaamiyu ni keenina.",
+     
     },
     {
       icon: CreditCardIcon,
       title: "Gurgurtaa meeshalee electronics haara ",
-      description: "Feedhi maamitoota dursa kan godhaate hojatu mani daldala meeshalee mana keenya maamiltootni kafalti isaani qoqoodani akka kafalanif haala mijata uume jira. kafalti guutuu erga rawantani booda meesha akka fudhaatan haala mijata uume jira. ",
+      description: "Gurgurtaa meeshalee electronics haara hedduu kennuu irrati argaama. isaan muraasni:",
       features: [
-        // "0% interest available",
-        // "Flexible payment terms",
-        // "Instant approval process",
-        // "No hidden charges",
-        // "Pay in 3, 6, or 12 months",
-        // "Manage payments easily"
+        "Eelee biddeena fi daaboo",
+        "Istoovi garagaraa",
+        "Maashinaa buna, shunkurti, juusi fi kanneen biro",
+        ""
       ]
     },
     {
