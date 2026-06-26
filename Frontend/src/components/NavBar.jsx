@@ -40,10 +40,14 @@ function NavBar() {
               <div className="flex-none">
                 <Link to="/" className="hover:opacity-80 transition-opacity" onClick={handleNavLinkClick}>
                   <div className="flex items-center gap-1.5 sm:gap-3">
-                    <img 
-                      src="/aa.jpg" 
-                      alt="Company Logo" 
-                      className="size-10 sm:size-12 md:size-14 rounded-full object-cover shadow-md ring-2 ring-primary/20 flex-shrink-0" 
+                    <img
+                      src="/fi.jpg"
+                      alt="Company Logo"
+                      className="size-10 sm:size-12 md:size-14 object-contain shadow-md ring-2 ring-primary/20 flex-shrink-0"
+                      onError={(e) => {
+                        console.error('Image failed to load:', e);
+                        e.target.style.display = 'none';
+                      }}
                     />
                     <div className="hidden sm:flex flex-col min-w-0">
                       <span className="font-bold text-sm sm:text-lg md:text-xl leading-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary truncate">
